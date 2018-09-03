@@ -80,9 +80,6 @@ public class SQSWithoutDelete {
 		List<Tuple2<String, Integer>> tupleList = new ArrayList<>();
 		ObjectMapper mapper = new ObjectMapper();
 		
-		//Test
-		//BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAI5IP2P7ICPZJRJPQ", "P9wUurupFD9zwPVghbkUsJD9Ywnmc1ktUOd3efyk");
-		
 		AmazonSQS amazonSQS = AmazonSQSClientBuilder.standard().withRegion(Regions.AP_NORTHEAST_2).build();
 		//AmazonSQS amazonSQS = AmazonSQSClientBuilder.standard().withRegion(Regions.AP_NORTHEAST_2).withCredentials(new AWSStaticCredentialsProvider(awsCreds)).build();
 		String sqsURL = amazonSQS.getQueueUrl(queueName).getQueueUrl();
